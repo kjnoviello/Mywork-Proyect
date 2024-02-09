@@ -39,7 +39,7 @@ switch (entorno) {
       dialect: dialect,
       port: port,
       ssl: ssl,
-      logging: false,
+      logging: console.log,
     };
     break;
   case "test":
