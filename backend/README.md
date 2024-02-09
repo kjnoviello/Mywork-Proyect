@@ -51,13 +51,13 @@ Node v20.10.0. Se descarga en: https://nodejs.org/en
 Clonar el proyecto
 
 ```bash
-  git clone https://github.com/AlexisPieropan/Mywork-Proyect.git MyWork
+  git clone https://github.com/AlexisPieropan/Mywork-Proyect.git
 ```
 
 Ir al directorio del proyecto general
 
 ```bash
-  cd MyWork
+  cd MyWork-Proyect
 ```
 
 Dentro directorio del proyecto general ir a la carpeta backend
@@ -117,21 +117,19 @@ Así se encuentra organizado el proyecto en cuestión.
 │   │   └───📄 .gitkeep
 │   ├───📁 models/
 │   │   └───📄 .gitkeep
-│   ├───📁 repositories/
-│   |   ├───📁 irepositories/
-│   │   |   └───📄 .gitkeep
+│   ├───📁 providers/
 │   │   └───📄 .gitkeep
 │   ├───📁 routes/
-│   │   └───📄 .gitkeep
+│   │   └───📄 index.routes.js
 │   ├───📁 services/
 │   │   └───📄 .gitkeep
 │   ├───📁 utils/
-│   │   └───📄 .gitkeep
+│   │   ├───📄 validateEnv.js
+│   │   └───📄 winston.logger.js
 │   └───📁 validations/
 │       └───📄 .gitkeep
 ├───📄 .env.example
 ├───📄 .gitignore
-├───📄 package-lock.json
 ├───📄 package.json
 ├───📄 README.md
 └───📄 server.js
