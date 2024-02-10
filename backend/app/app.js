@@ -67,6 +67,14 @@ if (entorno === "prod") {
 }
 
 // Importamos los modelos
+import "./models/relaciones.model.js";
+import "./models/rol.model.js";
+import "./models/usuario.model.js";
+import "./models/profesional.model.js";
+import "./models/servicios.model.js";
+import "./models/tarifa.model.js";
+import "./models/contratos.model.js";
+import "./models/resenias.model.js";
 
 app.use((req, res, next) => {
   req.timezone = tz; // Establece la zona horaria deseada
