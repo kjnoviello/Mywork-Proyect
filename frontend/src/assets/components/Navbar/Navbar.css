@@ -1,53 +1,48 @@
 /* Navbar.css */
-/*! CAPAS SE ELIMINE*/
-.navbar {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  
-  .nav-list {
-    list-style-type: none;
-    display: flex;
-    gap: 20px;
-  }
-  
-  .nav-item {
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  
-    &:hover {
-      background-color: #555;
-    }
-  }
-  
-  /* Agrega estilos para los botones */
-  .button-container {
-    margin-left: auto;
-    display: flex;
-    gap: 10px;
-  }
-  
-  /* Estilos específicos para los botones si es necesario */
-  .button-container button {
-    cursor: pointer;
-    padding: 10px 25px;
-    border-radius: 70px;
-    background-color: #555;
-    color: white;
-    transition: background-color 0.3s ease;
-  
-    &:hover {
-      background-color: #777;
-    }
-  }
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto&display=swap');  /*importacion de la fuente*/
+:root {
+  --color-primary: #3498db;
+  --color-secondary: #00B894;
+  --color1 : #12473e ;
+  --color2 : #026f6e ;
+  --color3 : #1ca39e ;
+  --font-family-h1: 'Roboto', sans-serif;
+  --font-family-text: 'Lato', sans-serif;
+  --font-family-varios: 'Arial', sans-serif;
+}
+
+.fuentePortada{
+  font-family: var(--font-family-h1);
+}
+
+.fuenteNav2Bt{
+  font-size: smaller;
+  text-transform: uppercase;
+  font-family: var(--font-family-text);
+}
+
+.fuenteNav{
+  font-size: medium;
+  text-transform: uppercase;
+  font-family: var(--font-family-text);
+}
+
+
+.color{
+  background-color: var(--color1);
+}
+
+span{
+  color: rgb(182, 182, 36);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.ml-custom{
+  margin-left: 1200px;
+}
+
+.mt-custom{
+  margin-top: -280px;
+}
+
+
