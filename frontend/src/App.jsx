@@ -1,13 +1,15 @@
 import './App.css'
 import Navbar from './assets/components/Navbar/Navbar'
+import Proceso from './assets/pages/Proceso/Proceso'
 
 
 function App() {
 
   return (
-    <div >
-    <Navbar/>
-   
+    <div className="app">
+    
+    <Navbar />
+    <Proceso />
     </div>
 
     
