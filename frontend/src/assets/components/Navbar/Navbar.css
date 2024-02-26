@@ -15,12 +15,14 @@
   font-family: var(--font-family-h1);
 }
 
+/*FUENTE DE LOS BTNS de logueos*/
 .fuenteNav2Bt{
   font-size: smaller;
   text-transform: uppercase;
   font-family: var(--font-family-text);
 }
 
+/*FUENTE DE BARRA DE NAV*/
 .fuenteNav{
   font-size: medium;
   text-transform: uppercase;
@@ -37,12 +39,24 @@ span{
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.ml-custom{
-  margin-left: 1200px;
-}
+
 
 .mt-custom{
   margin-top: -280px;
 }
 
 
+  .ml-custom{
+    margin-left: 1200px;
+  }
+ 
+
+  /*CLASES DE BOTONES DE REGISTROS (para simplificar codigo de componente)*/
+.btnIniSesion{
+  @apply lg:mr-4 color hover:bg-blue-700 text-white  py-3 px-4 rounded-full fuenteNav2Bt transition duration-500 ease-in-out
+
+}
+
+.btnCrearUs{
+  @apply hover:bg-gray-700 text-white py-3 px-4  border border-gray-300 rounded-full fuenteNav2Bt transition duration-500 ease-in-out
+}

@@ -8,6 +8,8 @@ import img3 from './img3.jpg';
 
 
 const Navbar = () => {
+
+  //LOGICA DE MOVIMIENTO DE IMGS
   const images = [img1, img2 , img3]; // Agrega más imágenes aquí
   const [currentIndex, setCurrentIndex] = useState(0);
   const [opacity, setOpacity] = useState(1);
@@ -26,54 +28,80 @@ const Navbar = () => {
       }, 700);
 
     }, 5000);
+
     // Limpia el intervalo al desmontar el componente
     return () => clearInterval(interval);
   }, [images.length]);
 
+
+  //LOGICA DE DESPLIEGUE NAVBAR RESPONSIVE
+  const [menuVisible, setMenuVisible] = useState(false);
+
+  const openMenu = () => {
+    setMenuVisible(!menuVisible);
+    console.log(menuVisible)
+  };
+
   return (
+    //NAVBAR:
+
     <div className="relative h-screen">
       {/* Fondo de parallax */}
       <div
         className="absolute top-0 left-0 w-screen h-4/5 bg-cover bg-center transition duration-1000 ease-in-out"
         style={{ backgroundImage: `url(${images[currentIndex]})`, opacity}}
-      ></div>
+        >
+      </div>
 
       {/* Contenido de la barra de navegación */}
-      <nav className="absolute top-0 left-0 w-full p-5 text-white z-10">
-        <div className="flex items-center justify-between">
-          <div className="text-2xl font-bold">Logo</div>           
-          <ul className="flex gap-4 ml-[-800px] fuenteNav"> {/* los pixeles negativos posicionan al contenedor de los "li" mas a la izquierda */}
-            <li className="hover:bg-gray-700 py-2 px-4 rounded cursor-pointer">Inicio</li>
-            <li className="hover:bg-gray-700 py-2 px-4 rounded cursor-pointer">Servicios</li>
-            <li className="hover:bg-gray-700 py-2 px-4 rounded cursor-pointer">Cómo Funciona</li>
-            <li className="hover:bg-gray-700 py-2 px-4 rounded cursor-pointer">Acerca de</li>
-          </ul>
+      <nav className='bg-gray-800 py-6 relative'>
+        <div className="container mx-auto flex px-8 xl:px-0">
+          <div className='flex flex-grow items-center'> <img src="./Flag_of_None.svg.png" alt="none" /> lg:mr-7</div>
+          <button
+        style={{ fontSize: '2rem' }}
+        onClick={openMenu}
+        className="flex lg:hidden text-white hover:text-gray-300 focus:outline-none text-2xl"
+      >
+        ☰
+      </button>
 
-          <div className="flex gap-4 ">
-            <button className="color hover:bg-blue-700 py-3 px-4 rounded-full fuenteNav2Bt">Iniciar sesión</button>
-            <button className="hover:bg-gray-700 py-3 px-4  border border-gray-300 rounded-full fuenteNav2Bt">Crear Cuenta</button>
+      {menuVisible && (
+        <div className='absolute top-20 bg-gray-800 w-full items-center lg:relative lg:hidden lg:top-0 left-0 py-14 lg:py-0 px-8 mb-8 '>
+
+            <ul className='flex flex-col lg:flex-row text-center mb-8 lg:mb-0'>
+              <li className='text-white lg:mr-7 mb-8 lg:mb-0'>Inicio</li>
+              <li className='text-white lg:mr-7 mb-8 lg:mb-0'>Servicios</li>
+              <li className='text-white lg:mr-7 mb-8 lg:mb-0'>Como funciona</li>
+              <li className='text-white lg:mr-7 mb-8 lg:mb-0'>Acerca de</li>
+            </ul>
+              <div className='flex flex-col lg:flex-row text-center'>
+                <button className="btnIniSesion mb-8">Iniciar Sesion</button>
+                <button className="btnCrearUs">Crear Cuenta</button>
+              </div>
           </div>
+      )}
+
+          <div className='lg:flex hidden flex-grow justify-between lg:relative lg:top-0'>
+
+            <ul className='flex'>
+              <li className='text-white lg:mr-7'>Inicio</li>
+              <li className='text-white lg:mr-7'>Servicios</li>
+              <li className='text-white lg:mr-7'>Como funciona</li>
+              <li className='text-white lg:mr-7'>Acerca de</li>
+            </ul>
+              <div >
+                <button className="btnIniSesion">Iniciar Sesion</button>
+                <button className="btnCrearUs">Crear Cuenta</button>
+              </div>
+          </div>
+
           
         </div>
-
-        
-        
-        
-        
-
-        <div className="text-center text-4xl font-semibold text-gray-800 mt-80 fuentePortada">
-          Encuentra, Contrata, Brilla <br />
-          Donde los Servicios <span >Brillan</span>
-        </div>
-        
-          <div className="ml-custom mt-custom">
-          <Search/>
-        </div>
-
       </nav>
-      
-      
-    </div>
+
+
+
+    </div> //CIERRE DEL DIV PRINCIPAL DEL EFECTO PARALLAX
   );
 };
 
