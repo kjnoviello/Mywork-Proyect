@@ -54,21 +54,24 @@ const Navbar = () => {
         </div>
 
       {/* Contenido de la barra de navegación */}
-      <nav className='bg-gray-800 py-6 relative'>
+      <nav className=' py-6 relative'>
         <div className="container mx-auto flex px-8 xl:px-0">
           {/*IMAGEN DE LOGO AQUI SOLO SE DEBE REEMPLAZAR*/}
           <div className='flex flex-grow items-center lg:mr-7 '> 
             <img src="./Flag_of_None.svg.png" alt="none" /> 
           </div>
           {/*BTN AL HACERSE RESPONSIVE*/}
-          <button
-            style={{ fontSize: '2rem' }}
-            onClick={openMenu}
-            className="flex lg:hidden text-white hover:text-gray-300 focus:outline-none text-2xl"
-              >
-            ☰
-          </button>
-      
+          
+          <div className='flex lg:hidden'  >
+          <input type="checkbox" id="checkbox" onClick={openMenu}/>
+          <label htmlFor="checkbox" className="toggle">
+            <div className="bars" id="bar1"></div>
+            <div className="bars" id="bar2"></div>
+            <div className="bars" id="bar3"></div>
+          </label>
+          </div>
+
+  
           {/*LOGICA PARA DESPLIEGUE DEL MENU RESPONSIVO*/}
           {menuVisible && (
             <div className='absolute top-20 bg-gray-800 w-full items-center lg:relative lg:hidden lg:top-0 left-0 py-14 lg:py-0 px-8 mb-8 '>
@@ -96,14 +99,17 @@ const Navbar = () => {
                 </ul>
                   <div >
                     <button className="btnIniSesion ">Iniciar Sesion</button>
-                    <button className="btnCrearUs">Crear Cuenta</button>
+                    <button className="btnCrearUs">Crear Cuenta</button>      
                   </div>
           </div>
-
-          
+              
         </div>
-      </nav>
 
+         
+
+
+      </nav>
+          
     </div> //CIERRE DEL DIV PRINCIPAL 
   );
 };
