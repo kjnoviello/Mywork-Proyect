@@ -54,7 +54,7 @@ const Navbar = () => {
         </div>
 
       {/* Contenido de la barra de navegación */}
-      <nav className=' py-6 relative'>
+      <nav className='bg-gray-800 py-6 relative'>
         <div className="container mx-auto flex px-8 xl:px-0">
           {/*IMAGEN DE LOGO AQUI SOLO SE DEBE REEMPLAZAR*/}
           <div className='flex flex-grow items-center lg:mr-7 '> 
@@ -76,8 +76,11 @@ const Navbar = () => {
           {menuVisible && (
             <div className='absolute top-20 bg-gray-800 w-full items-center lg:relative lg:hidden lg:top-0 left-0 py-14 lg:py-0 px-8 mb-8 '>
 
+                  <div className='mb-8'>
+                    <Search/>
+                  </div>
                 <ul className='flex flex-col lg:flex-row text-center mb-8 lg:mb-0'>
-                  <li className='text-white lg:mr-7 mb-8 lg:mb-0'>Inicio</li>
+                  
                   <li className='text-white lg:mr-7 mb-8 lg:mb-0 '>Servicios</li>
                   <li className='text-white lg:mr-7 mb-8 lg:mb-0'>Como funciona</li>
                   <li className='text-white lg:mr-7 mb-8 lg:mb-0'>Acerca de</li>
@@ -86,7 +89,9 @@ const Navbar = () => {
                     <button className="btnIniSesion mb-8">Iniciar Sesion</button>
                     <button className="btnCrearUs">Crear Cuenta</button>
                   </div>
-              </div>
+
+                  
+            </div>
           )}
 
                 {/*BTNES DE LA NAVBAR*/}
@@ -101,11 +106,15 @@ const Navbar = () => {
                     <button className="btnIniSesion ">Iniciar Sesion</button>
                     <button className="btnCrearUs">Crear Cuenta</button>      
                   </div>
-          </div>
+              </div>
               
         </div>
 
-         
+              {/*COMPONENTE SEARCH RESPONSIVE*/}
+        <div className='hidden sm:hidden md:hidden lg:flex justify-end mt-20 mr-20 '>
+          <Search/>
+        </div>
+ 
 
 
       </nav>
