@@ -2,6 +2,7 @@
 import  { useState, useEffect } from 'react';
 import './Navbar.css/'
 import Search from '../Search/Search';
+import ServicesDropdown from '../ServicesDropdown/ServicesDropdown';
 import img1 from './img1.jpg';
 import img2 from './img2.jpg'; 
 import img3 from './img3.jpg'; 
@@ -80,8 +81,9 @@ const Navbar = () => {
                     <Search/>
                   </div>
                 <ul className='flex flex-col lg:flex-row text-center mb-8 lg:mb-0'>
-                  
-                  <li className='text-white lg:mr-7 mb-8 lg:mb-0 '>Servicios</li>
+                  <li className='text-white lg:mr-7 mb-8 lg:mb-0'>
+                  <ServicesDropdown />
+                  </li>
                   <li className='text-white lg:mr-7 mb-8 lg:mb-0'>Como funciona</li>
                   <li className='text-white lg:mr-7 mb-8 lg:mb-0'>Acerca de</li>
                 </ul>
@@ -90,7 +92,6 @@ const Navbar = () => {
                     <button className="btnCrearUs">Crear Cuenta</button>
                   </div>
 
-                  
             </div>
           )}
 
@@ -98,7 +99,12 @@ const Navbar = () => {
               <div className='lg:flex hidden flex-grow justify-between lg:relative lg:top-0'>
                 <ul className='flex'>
                   <li className="hover:bg-gray-700 py-2 px-2 rounded cursor-pointer text-white lg:mr-7 transition duration-500 ease-in-out">Inicio</li>
-                  <li className="hover:bg-gray-700 py-2 px-2 rounded cursor-pointer text-white lg:mr-7 transition duration-500 ease-in-out">Servicios</li>
+                 
+                 <li className='cursor-pointer rounded py-2 px-2'>
+                  <ServicesDropdown />
+                 </li>
+                  
+
                   <li className="hover:bg-gray-700 py-2 px-2 rounded cursor-pointer text-white lg:mr-7 transition duration-500 ease-in-out">Cómo Funciona</li>
                   <li className="hover:bg-gray-700 py-2 px-2 rounded cursor-pointer text-white lg:mr-7 transition duration-500 ease-in-out">Acerca de</li>
                 </ul>
