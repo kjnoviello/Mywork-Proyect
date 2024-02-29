@@ -7,7 +7,7 @@ const Search = () => {
 
   return (
     <div className="flex flex-col items-center gap-4">
-      <div className="flex  items-center gap-2"> {/*PONER A COLUMNAS PARA EL RESPONSIVE*/}
+      <div className="flex flex-col lg:flex-row items-center gap-2  "> {/*PONER A COLUMNAS PARA EL RESPONSIVE*/}
         <div className="relative">
           <input
             type="text"
@@ -27,7 +27,7 @@ const Search = () => {
 
         
        {/*SE DEBE RECUPERAR DEL SERVIDOR LOS DATOS PARA LOS MAS BUSCADOS*/}
-      <div className="flex items-center">
+      <div className="hidden lg:flex items-center">
         <span className="text-white font-semibold mr-2">Más buscados:</span>
         <div className="flex gap-2">
           {popularServices.map((service, index) => (
