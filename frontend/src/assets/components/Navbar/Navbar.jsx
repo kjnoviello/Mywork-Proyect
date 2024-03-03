@@ -55,7 +55,7 @@ const Navbar = () => {
         </div>
 
       {/* Contenido de la barra de navegación */}
-      <nav className='bg-gray-800 py-6 relative'>
+      <nav className='bg-gray-800 lg:bg-transparent py-6 relative'>
         <div className="container mx-auto flex px-8 xl:px-0">
           {/*IMAGEN DE LOGO AQUI SOLO SE DEBE REEMPLAZAR*/}
           <div className='flex flex-grow items-center lg:mr-7 '> 
