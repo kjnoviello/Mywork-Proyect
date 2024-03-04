@@ -75,7 +75,7 @@ const Navbar = () => {
   
           {/*LOGICA PARA DESPLIEGUE DEL MENU RESPONSIVO*/}
           {menuVisible && (
-            <div className='absolute top-20 bg-gray-800 w-full items-center lg:relative lg:hidden lg:top-0 left-0 py-14 lg:py-0 px-8 mb-8 '>
+            <div className=' absolute top-20 bg-gray-800 w-full items-center lg:relative lg:hidden lg:top-0 left-0 py-14 lg:py-0 px-8 mb-8 '>
 
                   <div className='mb-8'>
                     <Search/>
@@ -97,7 +97,7 @@ const Navbar = () => {
 
                 {/*BTNES DE LA NAVBAR*/}
               <div className='lg:flex hidden flex-grow justify-between lg:relative lg:top-0'>
-                <ul className='flex'>
+                <ul className='flex space-x-12'>
                   <li className="hover:bg-gray-700 py-2 px-2 rounded cursor-pointer text-white lg:mr-7 transition duration-500 ease-in-out">Inicio</li>
                  
                  <li className='cursor-pointer rounded py-2 px-2'>
