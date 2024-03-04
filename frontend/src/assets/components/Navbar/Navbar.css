@@ -15,12 +15,14 @@
   font-family: var(--font-family-h1);
 }
 
+/*FUENTE DE LOS BTNS de logueos*/
 .fuenteNav2Bt{
   font-size: smaller;
   text-transform: uppercase;
   font-family: var(--font-family-text);
 }
 
+/*FUENTE DE BARRA DE NAV*/
 .fuenteNav{
   font-size: medium;
   text-transform: uppercase;
@@ -37,12 +39,90 @@ span{
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.ml-custom{
-  margin-left: 1200px;
-}
+
 
 .mt-custom{
   margin-top: -280px;
 }
+
+
+  .ml-custom{
+    margin-left: 1200px;
+  }
+ 
+
+  /*CLASES DE BOTONES DE REGISTROS (para simplificar codigo de componente)*/
+.btnIniSesion{
+  @apply lg:mr-4 color hover:bg-blue-700 text-white  py-3 px-4 rounded-full fuenteNav2Bt transition duration-500 ease-in-out
+
+}
+
+.btnCrearUs{
+  @apply hover:bg-gray-700 text-white py-3 px-4  border border-gray-300 rounded-full fuenteNav2Bt transition duration-500 ease-in-out
+}
+
+
+
+/*ESTILOS DE LA ANIMACION TOGGLE*/
+#checkbox {
+  display: none;
+}
+
+.toggle {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition-duration: .5s;
+}
+
+.bars {
+  width: 100%;
+  height: 4px;
+  background-color: rgb(250, 250, 250);
+  border-radius: 4px;
+}
+
+#bar2 {
+  transition-duration: .8s;
+}
+
+#bar1,#bar3 {
+  width: 70%;
+}
+
+#checkbox:checked + .toggle .bars {
+  position: absolute;
+  transition-duration: .5s;
+}
+
+#checkbox:checked + .toggle #bar2 {
+  transform: scaleX(0);
+  transition-duration: .5s;
+}
+
+#checkbox:checked + .toggle #bar1 {
+  width: 100%;
+  transform: rotate(45deg);
+  transition-duration: .5s;
+}
+
+#checkbox:checked + .toggle #bar3 {
+  width: 100%;
+  transform: rotate(-45deg);
+  transition-duration: .5s;
+}
+
+#checkbox:checked + .toggle {
+  transition-duration: .5s;
+  transform: rotate(180deg);
+}
+
+
 
 

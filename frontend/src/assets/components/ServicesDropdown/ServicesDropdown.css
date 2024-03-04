@@ -1,0 +1,51 @@
+/* ServicesDropdown.css */
+.services-dropdown {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .services-dropdown span {
+    color: white;
+  }
+  
+  .services-dropdown ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    border: 1px solid #555;
+    border-top: none;
+    display: none;
+    @apply lg:absolute;
+  }
+  
+  
+
+  .services-dropdown li {
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .services-dropdown.open ul {
+    display: block;
+  }
+  
+  .arrow-icon {
+    display: inline-block;
+    margin-left: 5px;
+    border: solid #fff;
+    border-width: 0 3px 3px 0;
+    padding: 3px;
+  }
+  
+  .arrow-icon.down {
+    transform: rotate(45deg);
+  }
+  
+  .arrow-icon.up {
+    transform: rotate(-135deg);
+  }
+  
