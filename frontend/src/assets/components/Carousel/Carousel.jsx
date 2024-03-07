@@ -3,13 +3,21 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 import {RxArrowTopRight} from 'react-icons/rx'
 
+import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
+
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { ServiceData } from '../constants';
 
+
+
+
 const Carousel = () => {
+
+  
+
   return (
     <div className='flex items-center justify-center flex-col h-screen bg-[#6b34aff3] '>
       <h1 className='text-white flex mb-20'>SERVICIOS</h1>
@@ -24,10 +32,12 @@ const Carousel = () => {
           }
         }}
         freeMode={true}
-        pagination={{clickable:true}}
-        modules={[FreeMode, Pagination, Autoplay]}
-        autoplay={{ delay: 3000 }} // Tiempo de espera entre las transiciones automáticas
-        className='max-w-[90%] lg:max-w-[80%] '
+        loop={true} //hace que las flechas del carousel al correr y llegar a la ult viñeta pueda correr a la primera denuevo 
+        pagination={{clickable:true}} //habilita los circulos de navegacion de viñetas
+        modules={[FreeMode, Pagination, Autoplay,Navigation]} //SE EXPORTAN LOS MODULOS PARA SU UTILIZACION
+        navigation={true} // ACTIVA LAS FLECHAS DEL CAROUSEL CON SU LOGICA DE MOVIMIENTO
+        autoplay={{ delay: 3000 }} // Tiempo de espera entre las transiciones automáticas para el movimiento del carousel
+        className='max-w-[90%] lg:max-w-[80%] ' //Tamaño del carousel
         >
           {ServiceData.map((item)=>
         <SwiperSlide key={item.title}>
@@ -41,9 +51,12 @@ const Carousel = () => {
                     <h1 className='text-xl lg:text-2xl'>{item.title}</h1>
                     <p className='lg:text-[18px]'>{item.content}</p>
                   </div>
+                  <RxArrowTopRight className='absolute bottom-5 left-5 w-[35px] h-[35px] text-white group-hover:text-blue-500 group-hover:rotate-45 duration-300'/>
               </div>
         </SwiperSlide>
           )}
+
+          
       </Swiper>
     </div>
    
