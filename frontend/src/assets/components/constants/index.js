@@ -7,12 +7,12 @@ import {
     RxAccessibility,
   } from "react-icons/rx";
   
-  import SpaceCity1 from "../Carousel/none1.png";
-  import SpaceCity5 from "../Carousel/none1.png";
-  import SpaceCity6 from "../Carousel/none1.png";
-  import SpaceCity7 from "../Carousel/none1.png";
-  import SpaceCity8 from "../Carousel/none1.png";
-  import SpaceCity9 from "../Carousel/none1.png";
+  import SpaceCity1 from "../Carousel/img/branding.jpg";
+  import SpaceCity5 from "../Carousel/img/management.png";
+  import SpaceCity6 from "../Carousel/img/design.png";
+  import SpaceCity7 from "../Carousel/img/seo.jpg";
+  import SpaceCity8 from "../Carousel/img/production.jpg";
+  import SpaceCity9 from "../Carousel/img/development.png";
   
   export const ServiceData = [
     {
