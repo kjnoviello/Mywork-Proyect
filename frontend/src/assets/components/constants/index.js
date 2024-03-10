@@ -14,6 +14,8 @@ import {
   import production from "../Carousel/img/production.jpg";
   import development from "../Carousel/img/development.png";
   
+  //ARREGLO que contiene la data para los slides 
+  //!!ESTO SE DEBE OBTENER DEL BACKEND
   export const ServiceData = [
     {
       icon: RxCrop,
