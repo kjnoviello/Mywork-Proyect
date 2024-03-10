@@ -77,6 +77,7 @@ const Carousel = () => {
 
         <div className='flex justify-center mb-3'>
           <hr className=' w-[20%] border-2 border-white mt-10 lg:mt-20 box-shadow-up' />
+          
         </div>
         </div>
     </div>
