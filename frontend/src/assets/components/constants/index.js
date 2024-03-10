@@ -7,48 +7,48 @@ import {
     RxAccessibility,
   } from "react-icons/rx";
   
-  import SpaceCity1 from "../Carousel/img/branding.jpg";
-  import SpaceCity5 from "../Carousel/img/management.png";
-  import SpaceCity6 from "../Carousel/img/design.png";
-  import SpaceCity7 from "../Carousel/img/seo.jpg";
-  import SpaceCity8 from "../Carousel/img/production.jpg";
-  import SpaceCity9 from "../Carousel/img/development.png";
+  import branding from "../Carousel/img/branding.jpg";
+  import management from "../Carousel/img/management.png";
+  import design from "../Carousel/img/design.png";
+  import seo from "../Carousel/img/seo.jpg";
+  import production from "../Carousel/img/production.jpg";
+  import development from "../Carousel/img/development.png";
   
   export const ServiceData = [
     {
       icon: RxCrop,
       title: "Development",
       content: "Lorem ipsum dolor sit /amet, consectetur adipiscing elit.",
-      backgroundImage: SpaceCity9,
+      backgroundImage: development,
     },
     {
       icon: RxPencil2,
       title: "Branding",
       content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      backgroundImage: SpaceCity1,
+      backgroundImage: branding,
     },
     {
       icon: RxDesktop,
       title: "Design",
       content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      backgroundImage: SpaceCity6,
+      backgroundImage: design,
     },
     {
       icon: RxReader,
       title: "Seo",
       content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      backgroundImage: SpaceCity7,
+      backgroundImage: seo,
     },
     {
       icon: RxAccessibility,
       title: "Management",
       content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      backgroundImage: SpaceCity5,
+      backgroundImage: management,
     },
     {
       icon: RxRocket,
       title: "Production",
       content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      backgroundImage: SpaceCity8,
+      backgroundImage: production,
     },
   ];

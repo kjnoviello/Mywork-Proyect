@@ -1,5 +1,5 @@
 //Importaciones de los modulos que necesita SWIPER para funcionar
-import { Navigation, Pagination, FreeMode, Scrollbar, A11y, Autoplay,EffectCoverflow } from 'swiper/modules';
+import { Navigation, Pagination, FreeMode, Autoplay,EffectCoverflow } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 //icono de la flecha dentro de los slides que hacen una animacion
@@ -20,10 +20,14 @@ const Carousel = () => {
 
   return (
     
-    <div className='flex justify-center flex-col h-[700px] lg:h-[700px] bg-[#6b34aff3] '>
-      <div className='flex mb-20  items-start justify-center lg:justify-start  lg:ml-60'>
+    <div className='flex justify-center flex-col h-[700px] lg:h-[700px]  bg-[#9862dac9]'>      
+    
+      <div className='lg:border-2 lg:rounded lg:h-[600px] lg:ml-40 lg:mr-40 bg-[#6b34aff3]'> {/* contenedor del borde maneja el color interno donde estan las cards */}
+
+      <div className='flex mb-10 lg:mt-4 items-start justify-center lg:justify-start  lg:ml-40'>
       <h1 className='text-white '>SERVICIOS</h1>
       </div>
+
       <Swiper  
         breakpoints={{
           340:{slidesPerView:2, //maneja la cantidad de slides cuando la pantalla es menor a 340px
@@ -71,8 +75,9 @@ const Carousel = () => {
 
       </Swiper>
 
-        <div className='flex justify-center'>
-          <hr className=' w-[20%] border-2 border-white mt-20 box-shadow-up' />
+        <div className='flex justify-center mb-3'>
+          <hr className=' w-[20%] border-2 border-white mt-10 lg:mt-20 box-shadow-up' />
+        </div>
         </div>
     </div>
    
