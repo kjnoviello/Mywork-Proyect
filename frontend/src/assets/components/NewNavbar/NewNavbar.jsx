@@ -12,14 +12,14 @@ import 'swiper/css/pagination';
 //CSS personalizado
 import './NewNavbar.css';
 
-
+import { dataCarousel } from '../constants';
 
 const NewNavbar = () => {
 //LOGICA DEL COMPONENTE
 
 
     return (
-    <div>
+    <div className='flex justify-center flex-col h-[700px] lg:h-[700px]  bg-[#ee3131fb]'>
                 <Swiper
             spaceBetween={30}
             effect={'fade'}
@@ -29,20 +29,16 @@ const NewNavbar = () => {
             }}
             modules={[EffectFade, Navigation, Pagination,Autoplay]}
             autoplay={{ delay: 3000 }}
-            className="mySwiper"
+            
         >
-            <SwiperSlide>
-            <img src="./img/img1.jpg" />
+           {dataCarousel.map((item)=>{
+            <SwiperSlide key={item.title}>
+           <div style={{backgroundImage:`url(${item.backgroundImage})` }}/>
+           <h1 className='text-xl lg:text-2xl text-white'>{item.title}</h1>
             </SwiperSlide>
-            <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-            </SwiperSlide>
-            <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-            </SwiperSlide>
-            <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-            </SwiperSlide>
+           })}
+            
+           
         </Swiper>
     </div>
     )
