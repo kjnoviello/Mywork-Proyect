@@ -1,5 +1,5 @@
 //IMPORTACIONES
-import { Navigation, Pagination, Autoplay,EffectFade } from 'swiper/modules';
+import { Navigation,  Autoplay, EffectFade } from 'swiper/modules';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -12,36 +12,34 @@ import 'swiper/css/pagination';
 //CSS personalizado
 import './NewNavbar.css';
 
+//IMG DE NAVBAR
+
 import { dataCarousel } from '../constants';
 
 const NewNavbar = () => {
-//LOGICA DEL COMPONENTE
-
-
-    return (
-    <div className='flex justify-center flex-col h-[700px] lg:h-[700px]  bg-[#ee3131fb]'>
-                <Swiper
-            spaceBetween={30}
-            effect={'fade'}
-            navigation={true}
-            pagination={{
-            clickable: true,
-            }}
-            modules={[EffectFade, Navigation, Pagination,Autoplay]}
-            autoplay={{ delay: 3000 }}
-            
-        >
-           {dataCarousel.map((item)=>{
-            <SwiperSlide key={item.title}>
-           <div style={{backgroundImage:`url(${item.backgroundImage})` }}/>
-           <h1 className='text-xl lg:text-2xl text-white'>{item.title}</h1>
-            </SwiperSlide>
-           })}
-            
-           
-        </Swiper>
+  //LOGICA DEL COMPONENTE
+  return (
+    <div className='flex justify-center flex-col h-[700px] lg:h-[700px]  '>
+      <Swiper
+        spaceBetween={30}
+        effect={'fade'}
+        navigation={false}
+       
+        modules={[EffectFade, Navigation, Autoplay]}
+        autoplay={{ delay: 3000 }}
+        loop={true}
+      >
+        {dataCarousel.map((item) => (
+          <SwiperSlide key={item.title}>
+             <div className='lg:h-[600px]  lg:w-screen overflow-hidden '> {/*MANEJA EL TAMAÑO Y LAS CLASES DE LOS SLIDES/CARDS DEL CAROUSEL */}
+                              {/*CONFIGURACION DE LA IMG Y LA INFO QUE SE MUESTRA DENTRO DE ELLA*/}
+                  <div className='absolute inset-0 bg-cover bg-center' style={{backgroundImage:`url(${item.backgroundImage})` }}/>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
-    )
-}
+  );
+};
 
-export default NewNavbar
+export default NewNavbar;
