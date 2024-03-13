@@ -20,7 +20,6 @@ const Nosotros = () => {
             <Information  title={aboutUs.title} text={aboutUs.text} btn={aboutUs.btn}/>
         </div>
         </>
-        
     )
 }
 
