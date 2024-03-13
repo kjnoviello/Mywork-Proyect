@@ -15,7 +15,7 @@ const Nosotros = () => {
 
     return (
         <>
-        <div className='divide-y-2 mx-1'>
+        <div className='divide-y-2 mx-5'>
             <Information  title={worker.title} text={worker.text} btn={worker.btn}/>
             <Information  title={aboutUs.title} text={aboutUs.text} btn={aboutUs.btn}/>
         </div>
