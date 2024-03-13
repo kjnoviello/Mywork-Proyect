@@ -8,8 +8,10 @@ const Information = (props) => {
             <div className='max-w-xl flex justify-center m-auto'>
                 <p className={`'mb-5 text-[#606060]' + ${style.text}`}>{props.text}</p>
             </div>
-            <button className='my-10 mx-auto bg-[#606060] h-12 rounded-[100px] w-80 text-center text-white'>
-                {props.btn}   
+            <button className='my-10 mx-auto bg-[#606060] h-12 rounded-[100px] text-center text-white'>
+                <p className='px-10'>
+                    {props.btn}   
+                </p>
             </button>    
         </section>
     )
