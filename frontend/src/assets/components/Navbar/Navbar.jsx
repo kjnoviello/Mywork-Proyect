@@ -95,7 +95,7 @@ const Navbar = () => {
             </div>
           )}
 
-                {/*BTNES DE LA NAVBAR*/}
+                {/*BTNES DE LA NAVBAR EN LG*/}
               <div className='lg:flex hidden flex-grow justify-between lg:relative lg:top-0'>
                 <ul className='flex space-x-12'>
                   <li className="hover:bg-gray-700 py-2 px-2 rounded cursor-pointer text-white lg:mr-7 transition duration-500 ease-in-out">Inicio</li>
@@ -130,3 +130,6 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+

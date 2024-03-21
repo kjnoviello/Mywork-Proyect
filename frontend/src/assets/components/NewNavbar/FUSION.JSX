@@ -1,9 +1,16 @@
-//IMPORTACIONES
+// NavbarWithParallax.js
+import  { useState, useEffect } from 'react';
+import './Navbar.css/'
+import Search from '../Search/Search';
+import ServicesDropdown from '../ServicesDropdown/ServicesDropdown';
+import img1 from './img1.jpg';
+import img2 from './img2.jpg'; 
+import img3 from './img3.jpg'; 
+
+//IMPORTACIONES DE NEWNAVBAR
 import { Navigation,  Autoplay, EffectFade } from 'swiper/modules';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-import  { useState } from 'react';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -11,29 +18,26 @@ import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-//CSS personalizado
-import './NewNavbar.css';
-
-
-//IMG DE NAVBAR
-
 import { dataCarousel } from '../constants';
-import Search from '../Search/Search';
-import ServicesDropdown from '../ServicesDropdown/ServicesDropdown';
 
-const NewNavbar = () => {
-  //!!LOGICA DEL COMPONENTE
-//LOGICA DE DESPLIEGUE NAVBAR RESPONSIVE
-const [menuVisible, setMenuVisible] = useState(false);
+const Navbar = () => {
 
-const openMenu = () => {
-  setMenuVisible(!menuVisible);
-  console.log(menuVisible)
-};
+ 
+
+  //LOGICA DE DESPLIEGUE NAVBAR RESPONSIVE
+  const [menuVisible, setMenuVisible] = useState(false);
+
+  const openMenu = () => {
+    setMenuVisible(!menuVisible);
+    console.log(menuVisible)
+  };
 
   return (
+    //NAVBAR:
+
     <div className='flex justify-center flex-col  h-[700px] lg:h-[700px]  '>
-      <Swiper
+        
+        <Swiper
         spaceBetween={30}
         effect={'fade'}
         navigation={false}
@@ -49,42 +53,33 @@ const openMenu = () => {
             <div className='lg:h-[600px]  lg:w-screen overflow-hidden '> 
             {/*CONFIGURACION DE LA IMG Y LA INFO QUE SE MUESTRA DENTRO DE ELLA*/}
             <div className='absolute inset-0 bg-cover bg-center' style={{backgroundImage:`url(${item.backgroundImage})` }}/>
-                            
 
-            {/*!! Contenido de la barra de navegación */}
 
-             
-                
-        
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-      
-      {/*ELEMENTO DEL NAV INYECTADO*/}
-       
-      
-       <nav className='bg-gray-800  lg:bg-transparent py-6 relative'>
-        <div className="container mx-auto flex px-8 xl:px-0">
-          {/*IMAGEN DE LOGO AQUI SOLO SE DEBE REEMPLAZAR*/}
-          <div className='flex flex-grow items-center lg:mr-7 '> 
-            <img src="./Flag_of_None.svg.png" alt="none" /> 
-          </div>
+      {/* Contenido de la barra de navegación */}
+      <nav className='bg-gray-800 lg:bg-transparent py-6 relative'>
+        <div className="container mx-auto flex flex-col lg:flex-row px-8 xl:px-0">
+         
           {/*BTN AL HACERSE RESPONSIVE*/}
-          
-          <div className='flex lg:hidden'  >
-          <input type="checkbox" id="checkbox" onClick={openMenu}/>
-          <label htmlFor="checkbox" className="toggle">
-            <div className="bars" id="bar1"></div>
-            <div className="bars" id="bar2"></div>
-            <div className="bars" id="bar3"></div>
-          </label>
+          <div className='flex justify-end '>
+             {/*IMAGEN DE LOGO AQUI SOLO SE DEBE REEMPLAZAR*/}
+              <div className='flex flex-grow items-center lg:mr-60 '> 
+                <img src="./Flag_of_None.svg.png" alt="none" /> 
+              </div>
+              {/*BTN RESPONSIVE se oculta cuando la pantalla se hace grande*/}
+              <div className='lg:hidden'>         
+                  <input type="checkbox" id="checkbox" onClick={openMenu}/>
+                  <label htmlFor="checkbox" className="toggle">
+                    <div className="bars" id="bar1"></div>
+                    <div className="bars" id="bar2"></div>
+                    <div className="bars" id="bar3"></div>
+                  </label>
+              </div>
           </div>
 
   
           {/*LOGICA PARA DESPLIEGUE DEL MENU RESPONSIVO*/}
           {menuVisible && (
-            <div className=' absolute top-20 bg-gray-800 w-full items-center lg:relative lg:hidden lg:top-0 left-0 py-14 lg:py-0 px-8 mb-8 '>
+            <div className=' relative top-0 bg-gray-800 w-full items-center lg:relative lg:hidden lg:top-0 left-0 py-14 lg:py-0 px-8 mb-8 '>
 
                   <div className='mb-8'>
                     <Search/>
@@ -133,11 +128,12 @@ const openMenu = () => {
 
 
       </nav>
-      
-
-
-    </div>
+      </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div> //CIERRE DEL DIV PRINCIPAL 
   );
 };
 
-export default NewNavbar;
+export default Navbar;
