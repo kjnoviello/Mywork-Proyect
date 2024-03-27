@@ -4,7 +4,6 @@ import Navbar from './assets/components/Navbar/Navbar'
 import Nosotros from './assets/pages/Nosotros/Nosotros'
 import Proceso from './assets/pages/Proceso/Proceso'
 import Carousel from './assets/components/Carousel/Carousel'
-import NewNavbar from './assets/components/NewNavbar/NewNavbar'
 
 function App() {
 
@@ -12,7 +11,6 @@ function App() {
     <div className="app">
       <Navbar />
       <Proceso />
-      <NewNavbar />
       <Carousel/>
       <Carousel/>
       <Nosotros />

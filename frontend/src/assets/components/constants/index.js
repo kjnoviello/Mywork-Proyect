@@ -16,9 +16,9 @@ import {
   import development from "../Carousel/img/development.png";
   
   //IMG DE NAVBAR
-  import img1 from "../NewNavbar/img/img1.jpg"
-  import img2 from "../NewNavbar/img/img2.jpg"
-  import img3 from "../NewNavbar/img/img3.jpg"
+  import img1 from "../NavInfo/img/img1.jpg"
+  import img2 from "../NavInfo/img/img2.jpg"
+  import img3 from "../NavInfo/img/img3.jpg"
 
   //ARREGLO QUE CONTIENE LA DATA DEL CAROUSEL DEL NAV
   export const dataCarousel = [{

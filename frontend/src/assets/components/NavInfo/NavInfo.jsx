@@ -1,27 +1,15 @@
 //IMPORTACIONES
-import { Navigation,  Autoplay, EffectFade } from 'swiper/modules';
-
-import { Swiper, SwiperSlide } from 'swiper/react';
-
 import  { useState } from 'react';
 
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/effect-fade';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
 
 //CSS personalizado
-import './NewNavbar.css';
+import './NavInfo.css';
 
-
-//IMG DE NAVBAR
-
-import { dataCarousel } from '../constants';
 import Search from '../Search/Search';
 import ServicesDropdown from '../ServicesDropdown/ServicesDropdown';
 
-const NewNavbar = () => {
+const NavInfo = () => {
+
   //!!LOGICA DEL COMPONENTE
 //LOGICA DE DESPLIEGUE NAVBAR RESPONSIVE
 const [menuVisible, setMenuVisible] = useState(false);
@@ -32,59 +20,34 @@ const openMenu = () => {
 };
 
   return (
-    <div className='flex justify-center flex-col  h-[700px] lg:h-[700px]  '>
-      <Swiper
-        spaceBetween={30}
-        effect={'fade'}
-        navigation={false}
-       
-        modules={[EffectFade, Navigation, Autoplay]}
-        //autoplay={{ delay: 3000 }}
-        loop={true}
-      >
-
-        {dataCarousel.map((item) => (
-          <SwiperSlide key={item.title}>
-            {/*MANEJA EL TAMAÑO Y LAS CLASES DE LOS SLIDES/CARDS DEL CAROUSEL */}
-            <div className='lg:h-[600px]  lg:w-screen overflow-hidden '> 
-            {/*CONFIGURACION DE LA IMG Y LA INFO QUE SE MUESTRA DENTRO DE ELLA*/}
-            <div className='absolute inset-0 bg-cover bg-center' style={{backgroundImage:`url(${item.backgroundImage})` }}/>
-                            
-
-            {/*!! Contenido de la barra de navegación */}
-
-             
-                
-        
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+    <div >
       
-      {/*ELEMENTO DEL NAV INYECTADO*/}
-       
       
-       <nav className='bg-gray-800  lg:bg-transparent py-6 relative'>
-        <div className="container mx-auto flex px-8 xl:px-0">
-          {/*IMAGEN DE LOGO AQUI SOLO SE DEBE REEMPLAZAR*/}
-          <div className='flex flex-grow items-center lg:mr-7 '> 
-            <img src="./Flag_of_None.svg.png" alt="none" /> 
-          </div>
+       {/* Contenido de la barra de navegación */}
+       <nav className='bg-gray-800 lg:bg-transparent py-6 relative'>
+        <div className="container mx-auto flex flex-col lg:flex-row px-8 xl:px-0">
+         
           {/*BTN AL HACERSE RESPONSIVE*/}
-          
-          <div className='flex lg:hidden'  >
-          <input type="checkbox" id="checkbox" onClick={openMenu}/>
-          <label htmlFor="checkbox" className="toggle">
-            <div className="bars" id="bar1"></div>
-            <div className="bars" id="bar2"></div>
-            <div className="bars" id="bar3"></div>
-          </label>
+          <div className='flex justify-end '>
+             {/*IMAGEN DE LOGO AQUI SOLO SE DEBE REEMPLAZAR*/}
+              <div className='flex flex-grow items-center lg:mr-60 '> 
+                <img src="./Flag_of_None.svg.png" alt="none" /> 
+              </div>
+              {/*BTN RESPONSIVE se oculta cuando la pantalla se hace grande*/}
+              <div className='lg:hidden'>         
+                  <input type="checkbox" id="checkbox" onClick={openMenu}/>
+                  <label htmlFor="checkbox" className="toggle">
+                    <div className="bars" id="bar1"></div>
+                    <div className="bars" id="bar2"></div>
+                    <div className="bars" id="bar3"></div>
+                  </label>
+              </div>
           </div>
 
   
           {/*LOGICA PARA DESPLIEGUE DEL MENU RESPONSIVO*/}
           {menuVisible && (
-            <div className=' absolute top-20 bg-gray-800 w-full items-center lg:relative lg:hidden lg:top-0 left-0 py-14 lg:py-0 px-8 mb-8 '>
+            <div className=' relative top-0 bg-gray-800 w-full items-center lg:relative lg:hidden lg:top-0 left-0 py-14 lg:py-0 px-8 mb-8 '>
 
                   <div className='mb-8'>
                     <Search/>
@@ -129,15 +92,10 @@ const openMenu = () => {
         <div className='hidden sm:hidden md:hidden lg:flex justify-end mt-20 mr-20 '>
           <Search/>
         </div>
- 
-
-
       </nav>
-      
-
-
+    
     </div>
   );
 };
 
-export default NewNavbar;
+export default NavInfo;
