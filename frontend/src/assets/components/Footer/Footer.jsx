@@ -6,7 +6,7 @@ const Footer = () => {
             <div className="mx-6 py-10 text-center md:text-left">
                 <div className="flex-row flex flex-wrap sm:flex-nowrap flex-col-reverse sm:flex-row">
                     {/* TW elements section */}
-                    <div className='w-1/4 w-full my-[40px] sm:mt-[0px] m-auto'>
+                    <div className='w-1/4 my-[40px] sm:mt-[0px] m-auto'>
                         <a href="#">
                             <div className="">
                                 <img src="https://dummyimage.com/150x150/000/fff&text=logo" alt="logo" />
