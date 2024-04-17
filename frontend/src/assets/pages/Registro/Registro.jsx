@@ -54,8 +54,8 @@ const Login = () => {
                         </label>
                         <br />
 
-                    <button className="submit"><strong>Registrarme                        </strong></button>
-                    <p className="signin">Ya posees una cuenta? <a href="#">Ingresar</a> </p>
+                    <button className="submit"><strong>Registrarme</strong></button>
+                    <p className="signin">Ya posees una cuenta? <a href="#">Ingresar</a></p>
                 </form>
             </main>
         </div>
