@@ -5,6 +5,7 @@ import Nosotros from './assets/pages/Nosotros/Nosotros'
 import Proceso from './assets/pages/Proceso/Proceso'
 import Carousel from './assets/components/Carousel/Carousel'
 import Registro from './assets/pages/Registro/Registro'
+import Login from './assets/pages/Login/Login'
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
       <Nosotros />
       <Footer />
       <Registro />
+      <Login />
     </div>
   )
 }
